@@ -47,7 +47,7 @@ namespace Discount.API.Extensions
                     if (retryForAvailability < 50)
                     {
                         retryForAvailability++;
-                        System.Threading.Thread.Sleep(2000);
+                        Thread.Sleep(2000);
                         MigrateDatabase<TContext>(host, retryForAvailability);
                     }
                 }
